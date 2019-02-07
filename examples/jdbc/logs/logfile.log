@@ -1,0 +1,29 @@
+[ERROR] 2018-12-28 15:37:10.319 [main] ConnectionUtil - Unable to get connection to database
+[TRACE] 2018-12-28 15:45:36.885 [main] ChampionOracle - Enter
+[ERROR] 2018-12-28 15:45:38.772 [main] ConnectionUtil - Unable to get connection to database
+[TRACE] 2018-12-28 15:45:38.775 [main] ChampionOracle - Exit with(Optional.empty)
+[TRACE] 2018-12-28 15:57:32.273 [main] ChampionOracle - Enter
+[ERROR] 2018-12-28 15:57:34.204 [main] ConnectionUtil - Unable to get connection to database
+[TRACE] 2018-12-28 15:57:34.208 [main] ChampionOracle - Exit with(Optional.empty)
+[TRACE] 2018-12-28 15:58:01.904 [main] ChampionOracle - Enter
+[ERROR] 2018-12-28 15:58:03.065 [main] ChampionOracle - Catching
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setStringInternal(OraclePreparedStatement.java:5741) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.setString(OraclePreparedStatement.java:5729) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setString(OraclePreparedStatementWrapper.java:289) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.ChampionOracle.getChampionByName(ChampionOracle.java:81) [classes/:?]
+	at com.example.services.ChampionService.getChampionByName(ChampionService.java:33) [classes/:?]
+	at com.example.application.Applicaiton.main(Applicaiton.java:14) [classes/:?]
+[ERROR] 2018-12-28 15:58:03.079 [main] ChampionOracle - Sql Exception ovcured
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setStringInternal(OraclePreparedStatement.java:5741) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.setString(OraclePreparedStatement.java:5729) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setString(OraclePreparedStatementWrapper.java:289) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.ChampionOracle.getChampionByName(ChampionOracle.java:81) [classes/:?]
+	at com.example.services.ChampionService.getChampionByName(ChampionService.java:33) [classes/:?]
+	at com.example.application.Applicaiton.main(Applicaiton.java:14) [classes/:?]
+[TRACE] 2018-12-28 15:58:03.080 [main] ChampionOracle - Exit with(Optional.empty)
+[TRACE] 2018-12-28 15:59:15.934 [main] ChampionOracle - Enter
+[TRACE] 2018-12-28 15:59:17.002 [main] ChampionOracle - Exit with(Optional[Champion [championId=1, championName=Vi, ability1=Vault Breaker, ability2=Denting Blows, ability3=Yup, ability4=Knockup, passive=Denting, health=400.0]])
+[TRACE] 2018-12-28 16:02:42.863 [main] ChampionOracle - Enter name = Vi
+[TRACE] 2018-12-28 16:02:43.851 [main] ChampionOracle - Exit with(Optional[Champion [championId=1, championName=Vi, ability1=Vault Breaker, ability2=Denting Blows, ability3=Yup, ability4=Knockup, passive=Denting, health=400.0]])
