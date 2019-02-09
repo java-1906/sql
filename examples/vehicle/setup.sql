@@ -29,23 +29,20 @@ BEGIN
 END;
 /
 
-CREATE OR REPLACE PROCEDURE login(username IN varchar2, password IN varchar2, is_admin out number, end_user_id out number) IS
-    users_password varchar2;
-    user_isAdmin number;
-    user_id number;
-BEGIN
-    select password into users_password, is_admin, end_user_id from end_user where username = username;
-    
-    if users_password = password then 
-        
-    end if;
-END;
-/
-
-declare
-    username varchar2(255);
-    password varchar2(255);
+create or replace procedure attempt_login(users_username in varchar2, ppassword in varchar2, pass out number, id out number, isAdmin out number) as
+    users_password varchar2(200);
+    userId number(10);
+    user_is_admin number(10);
 begin
-    username := 'quinn';
-    select password into password, is_admin, end_user_id from end_user where username = username;
+    select password, end_user_id, is_admin into users_password, userId, user_is_admin from end_user where username = users_username;
+    if users_password = ppassword then
+        pass := 1;
+        id := userId;
+        isAdmin := user_is_admin;
+    else
+        pass := 0;
+        id := 0;
+        isAdmin := 0;
+    end if;
 end;
+
